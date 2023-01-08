@@ -32,7 +32,7 @@ st.markdown(
     """
 ##### What kinds of datasets are you looking for?
 """)
-st.image("https://github.com/buds-lab/building-data-directory/blob/main/meta%20directory.png")
+st.image("https://github.com/buds-lab/building-data-directory/raw/main/meta%20directory.png")
 
 col1, col2, col3 = st.columns(3)
 with col1:
@@ -42,7 +42,7 @@ with col1:
 """)
     
 with col2:
-    st.markdown("![Alt Text](https://github.com/buds-lab/building-data-directory/blob/main/browsing.gif)")
+    st.markdown("![Alt Text](https://github.com/buds-lab/building-data-directory/raw/main/browsing.gif)")
 #%%
 # Get the sheet as dataframe
 def load_the_spreadsheet(spreadsheetname):
