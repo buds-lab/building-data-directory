@@ -53,14 +53,11 @@ def load_the_spreadsheet(spreadsheetname):
     df = DataFrame(worksheet.get_all_records())
     return df
 #%%
-#dataset.columns = dataset.loc[0]
-dataset = dataset.drop([0,1,2]).reset_index(drop=True)
 dataset = dataset.apply(pd.to_numeric, errors='ignore')
 dataset.columns = dataset.columns.str.replace('\u202f', '')
 dataset.columns = dataset.columns.str.replace('\xa0', '')
 dataset.columns = dataset.columns.str.replace('55154\\u202f', '')
 dataset.columns = dataset.columns.str.replace('\u202f\xa0', '')
-#dataset_info = [str(x).encode('UTF8') for x in dataset_info]
 #%%
 dataset_info = dataset.iloc[:, :8]
 dataset_info ['Building Type'] = dataset['Building Type']
