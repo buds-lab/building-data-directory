@@ -81,7 +81,7 @@ st.markdown(""" """)
 st.markdown(""" """)
 st.markdown(""" """)
 st.markdown("""*Any questions? Contact us📧: xiaoyu.jin@connect.polyu.hk*""")
-st.markdown("""<font size="7">*Acknowledge for the support by the National Key Research and Development Program of China (2021YFE0107400)*</font>""")
+st.markdown("""*<p style="font-size: 42px;">*Acknowledge for the support by the National Key Research and Development Program of China (2021YFE0107400)*</p>""")
 #%%
 def update_the_spreadsheet(spreadsheetname,dataframe):
     #col = ['Dataset Full Name','URL']
