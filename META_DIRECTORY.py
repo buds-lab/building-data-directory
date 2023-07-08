@@ -2,7 +2,7 @@
 """
 Created on Tue Oct 25 13:56:34 2022
 
-@author: 靳笑宇
+@author: Xiaoyu Jin
 """
 
 import streamlit as st
