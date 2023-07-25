@@ -33,7 +33,10 @@ arXiv:2307.00793 [stat.AP](or arXiv:2307.00793v1 [stat.AP] for this version)
 https://doi.org/10.48550/arXiv.2307.00793
 
 **· For developers:**
+
 The files with the suffix of ".py" are built for the streamlit webpage, the "META_DIRECTORY.py" is the main page (i.e., the meta directory). Other files in the folder "pages" are for the sub-pages of the streamlit api.  
+
 The “Procfile” file is the instruction for running the main page. If there is any change on the main page program file name, remember to make revision on that.  
+
 If any new library is imported, please note to add "lirary_name == version" (e.g., "plotly == 5.10.0") in the "requirements.txt" file.  
 The media files required on the API website ("meta directory.png", "browsing.gif"), history codes and tables ("history codes", "previous lists") are also stored in this repository.
