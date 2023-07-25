@@ -25,10 +25,12 @@ The sub-page of _Building Energy and Water Data_ has filtering functions on the 
 ![image](https://github.com/buds-lab/building-data-directory/assets/79083820/636e0d54-64ba-41b5-8a67-26901cc637c0)
 
 The preprint of the paper _The Building Data Genome Directory – An open, comprehensive data sharing platform for building performance research_ has been added to arxiv https://arxiv.org/abs/2307.00793
+
 To cite the Building Data Genome Directory:
-arXiv:2307.00793 [stat.AP]
- (or arXiv:2307.00793v1 [stat.AP] for this version)
- https://doi.org/10.48550/arXiv.2307.00793
+
+arXiv:2307.00793 [stat.AP](or arXiv:2307.00793v1 [stat.AP] for this version)
+
+https://doi.org/10.48550/arXiv.2307.00793
 
 **· For developers:**
 The files with the suffix of ".py" are built for the streamlit webpage, the "META_DIRECTORY.py" is the main page (i.e., the meta directory). Other files in the folder "pages" are for the sub-pages of the streamlit api.  
