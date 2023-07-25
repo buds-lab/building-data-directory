@@ -1,4 +1,4 @@
-# building-data-directory  
+# Building-Data-Genome-Directory  
 This is the program file of the Building Data Genome Directory, a comprehensive building dataset collection, where you can find the links for the datasets related with building energy research.  
 
 **· For users:**
