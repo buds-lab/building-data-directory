@@ -81,7 +81,8 @@ st.write(users_html, unsafe_allow_html=True)
 st.markdown(""" """)
 st.markdown(""" """)
 st.markdown(""" """)
-st.markdown("""*Any questions? Contact us📧: xiaoyu.jin@connect.polyu.hk*""")
+st.markdown("""*Any questions or ideas? Join our GitHub community at [building-data-directory Discussions](https://github.com/buds-lab/building-data-directory/discussions)""")
+st.markdown("""*Further questions? Contact us📧: xiaoyu.jin@connect.polyu.hk*""")
 st.markdown("""*<p style="font-size: 12px;">Acknowledge for the support by the National Key Research and Development Program of China (2021YFE0107400), and the joint effort of the Annex 81 community.*</p>""",unsafe_allow_html=True)
 #%%
 def update_the_spreadsheet(spreadsheetname,dataframe):
