@@ -81,13 +81,14 @@ st.write(users_html, unsafe_allow_html=True)
 st.markdown(""" """)
 st.markdown(""" """)
 st.markdown(""" """)
-st.markdown("""<p style="font-size: 16px;">To cite the Building Data Genome Directory:*</p>
+st.markdown("""*<p style="font-size: 16px;">To cite the Building Data Genome Directory:*</p>
 The Building Data Genome Directory – An open, comprehensive data sharing platform for building performance research.arXiv:2307.00793 [stat.AP](or arXiv:2307.00793v1 [stat.AP] for this version\n)
-https://doi.org/10.48550/arXiv.2307.00793\n
+[https://doi.org/10.48550/arXiv.2307.00793]\n
 
-<p style="font-size: 16px;">Other relevant publication:*</p>
-A review and reflection on open datasets of city-level building energy use and their applications. https://10.1016/j.enbuild.2023.112911""")
+*<p style="font-size: 16px;">Other relevant publication:*</p>
+A review and reflection on open datasets of city-level building energy use and their applications. [https://10.1016/j.enbuild.2023.112911]""")
 
+st.markdown(""" """)
 st.markdown(""" """)
 st.markdown("""*Any questions or ideas? Join our GitHub community at [building-data-directory Discussions](https://github.com/buds-lab/building-data-directory/discussions)*""")
 st.markdown("""*Further questions? Contact us📧: xiaoyu.jin@connect.polyu.hk*""")
