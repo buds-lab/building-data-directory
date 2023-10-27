@@ -27,10 +27,13 @@ The sub-page of _Building Energy and Water Data_ has filtering functions on the 
 The preprint of the paper _The Building Data Genome Directory – An open, comprehensive data sharing platform for building performance research_ has been added to arxiv https://arxiv.org/abs/2307.00793
 
 To cite the Building Data Genome Directory:
-
 arXiv:2307.00793 [stat.AP](or arXiv:2307.00793v1 [stat.AP] for this version)
-
 https://doi.org/10.48550/arXiv.2307.00793
+
+Other relevant publications:
+A review and reflection on open datasets of city-level building energy use and their applications. https://10.1016/j.enbuild.2023.112911
+
+Any questions or ideas? Join our GitHub community at [building-data-directory Discussions](https://github.com/buds-lab/building-data-directory/discussions)
 
 **· For developers:**
 
