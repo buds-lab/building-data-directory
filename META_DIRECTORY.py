@@ -35,6 +35,7 @@ st.markdown(
 """)
 st.image("https://github.com/buds-lab/building-data-directory/raw/main/meta%20directory.png")
 
+
 col1, col2, col3 = st.columns(3)
 with col1:
     st.subheader(
@@ -93,6 +94,8 @@ st.markdown("""*Any questions or ideas? Join our GitHub community at [building-d
 st.markdown("""*Further questions? Contact us📧: xiaoyu.jin@connect.polyu.hk*""")
 st.markdown(""" """)
 st.markdown("""*<p style="font-size: 12px;">Acknowledge for the support by the National Key Research and Development Program of China (2021YFE0107400), and the joint effort of the Annex 81 community.*</p>""",unsafe_allow_html=True)
+st.image("https://github.com/buds-lab/building-data-directory/blob/main/Annex%2081%20logo.png")
+
 #%%
 def update_the_spreadsheet(spreadsheetname,dataframe):
     #col = ['Dataset Full Name','URL']
