@@ -11,3 +11,4 @@ gspread_pandas
 google-auth
 st-gsheets-connection
 streamlit_gsheets
+streamlit_option_menu
