@@ -59,7 +59,8 @@ ssl._create_default_https_context = ssl._create_unverified_context
 # Create a Google Authentication connection object
 scope = ["https://www.googleapis.com/auth/spreadsheets","https://www.googleapis.com/auth/drive"]
 credentials = service_account.Credentials.from_service_account_info(
-   st.secrets["gcp_service_account"],
+   #st.secrets["gcp_service_account"],
+   st.secrets[connections.gsheets],
    scopes=scope)
 client = Client(scope=scope,creds=credentials)
 
