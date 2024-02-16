@@ -60,7 +60,7 @@ ssl._create_default_https_context = ssl._create_unverified_context
 scope = ["https://www.googleapis.com/auth/spreadsheets","https://www.googleapis.com/auth/drive"]
 credentials = service_account.Credentials.from_service_account_info(
    #st.secrets["gcp_service_account"],
-   st.secrets[connections.gsheets],
+   st.secrets["gcp_service_account"],
    scopes=scope)
 client = Client(scope=scope,creds=credentials)
 
