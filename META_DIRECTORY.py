@@ -11,6 +11,7 @@ from pandas import DataFrame
 from gspread_pandas import Spread,Client
 from google.oauth2 import service_account
 import ssl 
+from streamlit_gsheets import GSheetsConnection
 
 #Page title
 st.set_page_config(
@@ -55,18 +56,22 @@ def load_the_spreadsheet(spreadsheetname):
 #Link to google sheet
 ssl._create_default_https_context = ssl._create_unverified_context
 
-# Create a Google Authentication connection object
-scope = ["https://www.googleapis.com/auth/spreadsheets",
+## Create a Google Authentication connection object
+#scope = ["https://www.googleapis.com/auth/spreadsheets",
          "https://www.googleapis.com/auth/drive"]
-credentials = service_account.Credentials.from_service_account_info(
-    st.secrets["gcp_service_account"],
-    scopes=scope)
-client = Client(scope=scope,creds=credentials)
+#credentials = service_account.Credentials.from_service_account_info(
+#   st.secrets["gcp_service_account"],
+#    scopes=scope)
+#client = Client(scope=scope,creds=credentials)
 
-spreadsheetname = "Dataset_Intro_List"
-spread = Spread(spreadsheetname,client = client)
-sh = client.open(spreadsheetname)
-dataset = load_the_spreadsheet('contributed from users')
+#spreadsheetname = "Dataset_Intro_List"
+#spread = Spread(spreadsheetname,client = client)
+#sh = client.open(spreadsheetname)
+#dataset = load_the_spreadsheet('contributed from users')
+
+# Create a connection object.
+conn = st.connection("gsheets", type=GSheetsConnection)
+dataset = conn.read()
 #%%
 st.subheader(
     """
