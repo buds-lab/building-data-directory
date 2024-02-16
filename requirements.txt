@@ -10,3 +10,4 @@ gsheetsdb
 gspread_pandas
 google-auth
 st-gsheets-connection
+streamlit_gsheets
