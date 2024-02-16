@@ -11,7 +11,7 @@ from pandas import DataFrame
 from gspread_pandas import Spread,Client
 from google.oauth2 import service_account
 import ssl
-from streamlit_gsheets import GSheetsConnection
+
 
 #Page title
 st.set_page_config(
@@ -68,7 +68,7 @@ ssl._create_default_https_context = ssl._create_unverified_context
 #spread = Spread(spreadsheetname,client = client)
 #sh = client.open(spreadsheetname)
 #dataset = load_the_spreadsheet('contributed from users')
-
+from streamlit_gsheets import GSheetsConnection
 # Create a connection object.
 conn = st.connection("gsheets", type=GSheetsConnection)
 dataset = conn.read()
