@@ -10,7 +10,7 @@ import pandas as pd
 from pandas import DataFrame
 from gspread_pandas import Spread,Client
 from google.oauth2 import service_account
-import ssl 
+import ssl
 from streamlit_gsheets import GSheetsConnection
 
 #Page title
