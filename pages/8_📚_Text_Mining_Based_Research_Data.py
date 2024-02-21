@@ -52,7 +52,7 @@ def filedownload(df):
 #sh = client.open(spreadsheetname)
 #dataset = load_the_spreadsheet('8.Text Mining')
 conn = st.connection("gsheets", type=GSheetsConnection)
-dataset = conn.read(worksheet="6.Building Information",usecols=[0,1])
+dataset = conn.read(worksheet="8.Text Mining",usecols=[0,1])
 dataset = dataset.dropna(thresh=2)
 #%%
 dataset= dataset.reset_index(drop=True)
