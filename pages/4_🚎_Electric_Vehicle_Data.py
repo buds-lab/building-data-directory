@@ -49,7 +49,7 @@ ssl._create_default_https_context = ssl._create_unverified_context
 #sh = client.open(spreadsheetname)
 #dataset = load_the_spreadsheet('4.Electric Vehicle')
 conn = st.connection("gsheets", type=GSheetsConnection)
-dataset = conn.read(worksheet="4.Electric Vehicle",usecols=[0,1,2,3])
+dataset = conn.read(worksheet="4.Electric Vehicle",usecols=[0,1])
 dataset = dataset.dropna(thresh=2)
 #%%
 dataset= dataset.reset_index(drop=True)
