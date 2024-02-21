@@ -72,7 +72,7 @@ ssl._create_default_https_context = ssl._create_unverified_context
 from streamlit_gsheets import GSheetsConnection
 # Create a connection object.
 conn = st.connection("gsheets", type=GSheetsConnection)
-dataset = conn.read(worksheet="URL")
+dataset = conn.read(worksheet="contributed from users")
 #%%
 st.subheader(
     """
@@ -80,10 +80,8 @@ st.subheader(
 """)
 st.markdown("""*Note: These datasets will be added to the directory after review*""")
 for i in range(len(dataset)):
-    #url = dataset['URL'][i]
-    url = dataset[i]
-    #dataset['URL'][i] =  f'<a href="{url}">{url}</a>'
-    dataset[i] =  f'<a href="{url}">{url}</a>'
+    url = dataset['URL'][i]
+    dataset['URL'][i] =  f'<a href="{url}">{url}</a>'
 dataset.index = dataset.index + 1 
 users_html = dataset.iloc[:,:-1].to_html(escape=False)
 st.write(users_html, unsafe_allow_html=True)
