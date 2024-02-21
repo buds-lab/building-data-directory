@@ -8,7 +8,7 @@ Created on Tue Oct 25 13:56:34 2022
 import streamlit as st
 import pandas as pd
 from pandas import DataFrame
-from gspread_pandas import Spread,Client
+#from gspread_pandas import Spread,Client
 from google.oauth2 import service_account
 import ssl
 
@@ -64,15 +64,15 @@ credentials = service_account.Credentials.from_service_account_info(
    scopes=scope)
 client = Client(scope=scope,creds=credentials)
 
-spreadsheetname = "Dataset_Intro_List"
-spread = Spread(spreadsheetname,client = client)
-sh = client.open(spreadsheetname)
+#spreadsheetname = "Dataset_Intro_List"
+#spread = Spread(spreadsheetname,client = client)
+#sh = client.open(spreadsheetname)
 dataset = load_the_spreadsheet('contributed from users')
 
-#from streamlit_gsheets import GSheetsConnection
+from streamlit_gsheets import GSheetsConnection
 # Create a connection object.
-#conn = st.connection("gsheets", type=GSheetsConnection)
-#dataset = conn.read()
+conn = st.connection("gsheets", type=GSheetsConnection)
+dataset = conn.read()
 #%%
 st.subheader(
     """
