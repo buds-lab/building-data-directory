@@ -14,7 +14,7 @@ import plotly.express as px
 from gspread_pandas import Spread,Client
 from google.oauth2 import service_account
 import ssl 
-
+from streamlit_gsheets import GSheetsConnection
 st.set_page_config(
     page_title="Electric Vehicle Data"
 )
@@ -37,17 +37,20 @@ def filedownload(df):
 ssl._create_default_https_context = ssl._create_unverified_context
 
 # Create a Google Authentication connection object
-scope = ["https://www.googleapis.com/auth/spreadsheets",
-         "https://www.googleapis.com/auth/drive"]
-credentials = service_account.Credentials.from_service_account_info(
-    st.secrets["gcp_service_account"],
-    scopes=scope)
-client = Client(scope=scope,creds=credentials)
+#scope = ["https://www.googleapis.com/auth/spreadsheets",
+#         "https://www.googleapis.com/auth/drive"]
+#credentials = service_account.Credentials.from_service_account_info(
+#    st.secrets["gcp_service_account"],
+#    scopes=scope)
+#client = Client(scope=scope,creds=credentials)
 
-spreadsheetname = "Dataset_Intro_List"
-spread = Spread(spreadsheetname,client = client)
-sh = client.open(spreadsheetname)
-dataset = load_the_spreadsheet('4.Electric Vehicle')
+#spreadsheetname = "Dataset_Intro_List"
+#spread = Spread(spreadsheetname,client = client)
+#sh = client.open(spreadsheetname)
+#dataset = load_the_spreadsheet('4.Electric Vehicle')
+conn = st.connection("gsheets", type=GSheetsConnection)
+dataset = conn.read(worksheet="4.Electric Vehicle",usecols=[0,1,2,3])
+dataset = dataset.dropna(thresh=2)
 #%%
 dataset= dataset.reset_index(drop=True)
 
