@@ -45,7 +45,7 @@ def load_the_spreadsheet(spreadsheetname):
 #spreadsheetname = "Dataset_Intro_List"
 #spread = Spread(spreadsheetname,client = client)
 #sh = client.open(spreadsheetname)
-dataset = load_the_spreadsheet('3.Energy')
+#dataset = load_the_spreadsheet('3.Energy')
 
 conn = st.connection("gsheets", type=GSheetsConnection)
 dataset = conn.read(worksheet="3.Energy",usecols=[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31])
