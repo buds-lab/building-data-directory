@@ -67,7 +67,7 @@ ssl._create_default_https_context = ssl._create_unverified_context
 #spreadsheetname = "Dataset_Intro_List"
 #spread = Spread(spreadsheetname,client = client)
 #sh = client.open(spreadsheetname)
-dataset = load_the_spreadsheet('contributed from users')
+#dataset = load_the_spreadsheet('contributed from users')
 
 from streamlit_gsheets import GSheetsConnection
 # Create a connection object.
