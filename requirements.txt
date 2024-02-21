@@ -1,14 +1,12 @@
-numpy
+numpy==1.21.6
 streamlit>=1.28
-pandas
-seaborn
-pybase64
-altair
-plotly
-openpyxl
-gsheetsdb
-gspread_pandas
-google-auth
+pandas==1.3.5
+seaborn==0.11.0
+pybase64==1.2.3
+altair==4.2.0
+plotly==5.10.0
+openpyxl==3.0.0
+gsheetsdb ==0.1.13.1
+gspread_pandas == 3.2.2
+google-auth ==  2.13.0
 st-gsheets-connection
-streamlit_gsheets
-streamlit_option_menu
