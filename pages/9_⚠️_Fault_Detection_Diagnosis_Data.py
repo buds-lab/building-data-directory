@@ -2,7 +2,7 @@
 """
 Created on Wed Oct 26 10:15:51 2022
 
-@author: 靳笑宇
+@author: Xiaoyu Jin
 """
 import streamlit as st
 import pandas as pd
@@ -13,7 +13,7 @@ import plotly.express as px
 from gspread_pandas import Spread,Client
 from google.oauth2 import service_account
 import ssl 
-
+from streamlit_gsheets import GSheetsConnection
 st.set_page_config(
     page_title="Fault Detection Diagnosis Data"
 )
@@ -36,17 +36,20 @@ def filedownload(df):
 ssl._create_default_https_context = ssl._create_unverified_context
 
 # Create a Google Authentication connection object
-scope = ["https://www.googleapis.com/auth/spreadsheets",
-         "https://www.googleapis.com/auth/drive"]
-credentials = service_account.Credentials.from_service_account_info(
-    st.secrets["gcp_service_account"],
-    scopes=scope)
-client = Client(scope=scope,creds=credentials)
+#scope = ["https://www.googleapis.com/auth/spreadsheets",
+#         "https://www.googleapis.com/auth/drive"]
+#credentials = service_account.Credentials.from_service_account_info(
+#    st.secrets["gcp_service_account"],
+#    scopes=scope)
+#client = Client(scope=scope,creds=credentials)
 
-spreadsheetname = "Dataset_Intro_List"
-spread = Spread(spreadsheetname,client = client)
-sh = client.open(spreadsheetname)
-dataset = load_the_spreadsheet('10.FDD')
+#spreadsheetname = "Dataset_Intro_List"
+#spread = Spread(spreadsheetname,client = client)
+#sh = client.open(spreadsheetname)
+#dataset = load_the_spreadsheet('10.FDD')
+conn = st.connection("gsheets", type=GSheetsConnection)
+dataset = conn.read(worksheet="10.FDD",usecols=[0,1])
+dataset = dataset.dropna(thresh=2)
 #%%
 dataset= dataset.reset_index(drop=True)
 
