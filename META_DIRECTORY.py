@@ -72,7 +72,7 @@ ssl._create_default_https_context = ssl._create_unverified_context
 from streamlit_gsheets import GSheetsConnection
 # Create a connection object.
 conn = st.connection("gsheets", type=GSheetsConnection)
-dataset = conn.read(worksheet="contributed from users",usecols=[0, 3])
+dataset = conn.read(worksheet="contributed from users",usecols=[0,1,2,3])
 
 #%%
 st.subheader(
