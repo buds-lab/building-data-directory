@@ -27,8 +27,7 @@ The sub-page of _Building Energy and Water Data_ has filtering functions on the 
 The preprint of the paper _The Building Data Genome Directory – An open, comprehensive data sharing platform for building performance research_ has been added to arxiv https://arxiv.org/abs/2307.00793
 
 To cite the Building Data Genome Directory:
-arXiv:2307.00793 [stat.AP](or arXiv:2307.00793v1 [stat.AP] for this version)
-https://doi.org/10.48550/arXiv.2307.00793
+Xiaoyu Jin et al. The Building Data Genome Directory – An open, comprehensive data sharing platform for building performance research. 2023 J. Phys.: Conf. Ser. 2600 032003. https://iopscience.iop.org/article/10.1088/1742-6596/2600/3/032003
 
 Other relevant publications:
 A review and reflection on open datasets of city-level building energy use and their applications. https://10.1016/j.enbuild.2023.112911
